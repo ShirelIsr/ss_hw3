@@ -15,8 +15,8 @@ int main()
     }
     char first[1];
      if(getLine(first)!=0) printf("Err");
-    printf("%s ",word);
-    printf("%c \n",op);
+    //printf("%s ",word);
+    //printf("%c \n",op);
     switch(op){
     case 'a':
         print_lines(word);
