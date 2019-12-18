@@ -1,49 +1,31 @@
 #include <stdio.h>
 #include "isort.h"
 
-int main() {
+int main()
+{
     int arr[SIZE] = {0};
+    printf("Pleas enter the a numbers :\n");
     for (int i = 0; i < SIZE; i++)
     {
-        printf("enter a num :\n");
-        scanf("%d",(arr+i));
-        //printf("%d\n",*(arr+i));
+        scanf("%d", (arr + i));
     }
     printf("before sort\n");
-    for (int i = 0; i < SIZE; i++)
-    {
-        if(i != SIZE -1)
-        {
-            printf("%d,",*(arr+i));
-        }
-        else printf("%d\n",*(arr+i));
-    }
+    print_arr(arr, SIZE);
+    insertion_sort(arr, SIZE);
     printf("after sort\n");
-
-    insertion_sort(arr,SIZE);
-
-    for (int i = 0; i < SIZE; i++)
-    {
-        if(i != SIZE -1)
-        {
-            printf("%d,",*(arr+i));
-        }
-        else printf("%d\n",*(arr+i));
-    }
+    print_arr(arr, SIZE);
 
     int sort_arr[SIZE] = {0};
     int *t = &sort_arr[5];
+     printf("Pleas enter the a numbers :\n");
     for (int i = 0; i < SIZE; i++)
     {
-        sort_arr[i] = i;
-        printf("%d,",sort_arr[i]);
+        scanf("%d", (arr + i));
     }
-    printf("\n");
-    shift_element(t,2);
-    printf("\n");
-    for (int i = 0; i < SIZE; i++)
-    {
-        printf("%d,",sort_arr[i]);
-    }
+    printf("befor shift the fifth element\n");
+    print_arr(sort_arr, SIZE);
+    shift_element(t, 2);
+    printf("after shift the fifth element\n");
+    print_arr(sort_arr, SIZE);
     return 0;
 }
