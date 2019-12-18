@@ -4,16 +4,9 @@
 int main()
 {
     char word[WORD] = {'\0'};
-    char index=getc(stdin);
     char op='\0';
-    int i = 0;
-    while (index != ' ')
-    {
-        word[i] = index;
-        index = getc(stdin);
-        i++;
-    }
-    word[i] = '\0';
+    if(!getWord(word)) printf("Err");
+    char index=getc(stdin);
     while((index != '\n') )
     {
         if(index =='a') op='a';
@@ -21,9 +14,9 @@ int main()
          index=getc(stdin);
     }
     char first[1];
-     i=getLine(first);
-    //printf("%s ",word);
-    //printf("%c \n",op);
+     if(getLine(first)!=0) printf("Err");
+    printf("%s ",word);
+    printf("%c \n",op);
     switch(op){
     case 'a':
         print_lines(word);

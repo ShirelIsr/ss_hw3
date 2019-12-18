@@ -110,7 +110,7 @@ void print_similar_words(char *str)
     int flag = 1;
     while (flag)
     {
-        char w[WORD];
+        char w[WORD]={'\0'};
         flag = getWord(w);
         if (similar(w, str, 1) || similar(w, str, 0))
         {
