@@ -20,7 +20,7 @@ int main()
      printf("Pleas enter the a numbers :\n");
     for (int i = 0; i < SIZE; i++)
     {
-        scanf("%d", (arr + i));
+        scanf("%d", (sort_arr + i));
     }
     printf("befor shift the fifth element\n");
     print_arr(sort_arr, SIZE);
