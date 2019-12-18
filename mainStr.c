@@ -3,7 +3,7 @@
 
 int main()
 {
-    char word[WORD];
+    char word[WORD] = {'\0'};
     char index=getc(stdin);
     char op='\0';
     int i = 0;
@@ -19,12 +19,11 @@ int main()
         if(index =='a') op='a';
         if(index =='b') op='b';
          index=getc(stdin);
-
     }
     char first[1];
      i=getLine(first);
-    printf("%s ",word);
-    printf("%c \n",op);
+    //printf("%s ",word);
+    //printf("%c \n",op);
     switch(op){
     case 'a':
         print_lines(word);
